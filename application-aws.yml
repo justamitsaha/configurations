@@ -1,0 +1,4 @@
+my:
+  greeting: Hello Shamit from AWS
+  list:
+    values: One, Two, Three, AWS
