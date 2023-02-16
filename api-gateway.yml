@@ -1,0 +1,52 @@
+server:
+  port: '8080'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes[0]:
+        id: discovery-server
+        predicates[0]: Path=/eureka/web
+        filters[0]: SetPath=/
+        uri: http://localhost:8081
+      routes[1]:
+        id: discovery-server-static
+        uri: http://localhost:8081
+        predicates[0]: Path=/eureka/**         
+      routes[2]:
+        uri: lb://on-boarding-service
+        id: on-boarding-service
+        predicates[0]: Path=/onBoardingService/**
+      routes[3]:
+        predicates[0]: Path=/authentication/**
+        id: authentication-service
+        uri: lb://authentication-service
+      routes[4]:
+        uri: lb://redis-cache-service
+        id: redis-cache-service
+        predicates[0]: Path=/redisCache/**
+      routes[5]:
+        uri: lb://config-service
+        id: config-service
+        predicates[0]: Path=/configService/**
+
+logging:
+  level:
+    org:
+      spring:
+        security: TRACE
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionRouteLocator: INFO
+            nodeValue: TRACE
+    root: INFO        
+

@@ -1,5 +1,5 @@
 demo:
-  property: Shamit-aws
+  property: Shamit-amit-aws
 
 spring:
   datasource:

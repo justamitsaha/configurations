@@ -1,5 +1,21 @@
 demo:
-  property: Shamit-amit
+  property: Shamit-amit-Ne
+
+server:
+  port: 0
+  servlet:
+    context-path: /onBoardingService
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh    
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
 
 spring:
   datasource:
