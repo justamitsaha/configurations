@@ -1,0 +1,18 @@
+server:
+  port: '0'
+  servlet:
+    context-path: /authentication
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+spring:
+  datasource:
+    username: username
+    url: jdbc:mysql://192.168.23.1:3306/eazybank
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'true'

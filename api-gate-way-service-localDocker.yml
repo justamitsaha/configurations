@@ -19,13 +19,13 @@ spring:
         uri: http://discovery-service:8081
         predicates[0]: Path=/eureka/**         
       routes[2]:
-        uri: lb://on-boarding-service
-        id: on-boarding-service
+        uri: lb://onboard-user-service
+        id: onboard-user-service
         predicates[0]: Path=/onBoardingService/**
       routes[3]:
         predicates[0]: Path=/authentication/**
-        id: authentication-service
-        uri: lb://authentication-service
+        id: authentication-jwt-service
+        uri: lb://authentication-jwt-service
       routes[4]:
         uri: lb://redis-cache-service
         id: redis-cache-service
@@ -46,5 +46,8 @@ logging:
             route:
               RouteDefinitionRouteLocator: INFO
             nodeValue: TRACE
-    root: INFO      
+    root: INFO
+allowedUrls:
+  http://localhost:4200,http://localhost:80
+jwtKey: jxgEQeXHuPq8VdbyYFNkANdudQ53YUn4
 

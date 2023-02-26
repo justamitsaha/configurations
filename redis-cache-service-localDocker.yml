@@ -1,0 +1,44 @@
+server:
+  port: 0
+  servlet: 
+    context-path: /redisCache
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistery: true
+    serviceUrl:
+      defaultZone: http://discovery-service:8081/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enable: true
+  info:
+    env:
+      enabled: true
+
+endpoints:
+  shutdown:
+    enable: true
+
+info:
+  app:
+   name: Redis Cache Service
+   description: Hi Tech bank API
+   version: 1.0.0
+
+redis:
+  host: host.docker.internal
+  port: 6379
+
+sample:
+  textObj: Hello
+  mapObj: '{street: ''123 Main Street'', city: ''New York'', state: ''NY'', zip: ''10001''}'
+  listObj: Jan, Feb, March          
