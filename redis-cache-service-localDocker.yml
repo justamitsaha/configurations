@@ -8,7 +8,7 @@ eureka:
     preferIpAddress: true
   client:
     registerWithEureka: true
-    fetchRegistery: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery-service:8081/eureka
 
@@ -19,14 +19,14 @@ management:
         include: "*"
   endpoint:
     shutdown:
-      enable: true
+      enabled: true
   info:
     env:
       enabled: true
 
 endpoints:
   shutdown:
-    enable: true
+    enabled: true
 
 info:
   app:
