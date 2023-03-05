@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /awsS3Service
+aws: test2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

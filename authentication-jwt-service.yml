@@ -37,7 +37,7 @@ info:
 spring:
   datasource:
     username: username
-    url: jdbc:mysql://192.168.23.1:3306/eazybank
+    url: jdbc:mysql://192.168.0.105:3306/eazybank
     password: password
   jpa:
     properties:
