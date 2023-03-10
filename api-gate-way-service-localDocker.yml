@@ -74,6 +74,6 @@ logging:
             nodeValue: TRACE
     root: INFO
 allowedUrls:
-  http://localhost:4200,http://localhost:80,http://localhost
+  http://localhost:4200,http://localhost:80,http://localhost, http://localhost
 jwtKey: jxgEQeXHuPq8VdbyYFNkANdudQ53YUn4
 

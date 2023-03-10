@@ -37,8 +37,8 @@ info:
 spring:
   datasource:
     url: jdbc:mysql://192.168.0.105:3306/high_tech_bank_onboard
-    username: username
-    password: password
+    username: shamit
+    password: Ch@ddu001
   jpa:
     properties:
       hibernate:

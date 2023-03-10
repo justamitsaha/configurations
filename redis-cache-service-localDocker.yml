@@ -35,7 +35,7 @@ info:
    version: 1.0.0
 
 redis:
-  host: host.docker.internal
+  host: 192.168.0.105
   port: 6379
 
 sample:
