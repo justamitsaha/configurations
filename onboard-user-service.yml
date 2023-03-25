@@ -56,6 +56,8 @@ logging:
 
 redis-app:
  saveApplication: http://redis-cache-service/redisCache/public/saveApplication
+aws-s3:
+ fileUpload: http://aws-service/awsService/public/uploadToS3
 
 demo:
   property: Shamit-amit-Ne

@@ -1,0 +1,41 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /awsService
+# eureka:
+#   instance:
+#     preferIpAddress: true
+#   client:
+#     registerWithEureka: true
+#     fetchRegistry: true
+#     serviceUrl:
+#       defaultZone: http://localhost:8081/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+aws:
+  region: ap-south-1        
+  s3Bucket: dev-amit-test-bucket
+  snsArn: arn:aws:sns:ap-south-1:615839970612:on-boarding
+  sqsUrl: https://sqs.ap-south-1.amazonaws.com/615839970612/on-boarding-queue
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hightechbank@gmail.com
+    password: rguwvduonisvcxll
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+mail:
+  otp:
+    subject: OTP for creating account with High tech bank

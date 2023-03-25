@@ -60,6 +60,10 @@ spring:
         uri: lb://config-service
         id: config-service
         predicates[0]: Path=/configService/**
+      routes[6]:
+        uri: lb://aws-service
+        id: aws-service
+        predicates[0]: Path=/awsService/**
 
 logging:
   level:
