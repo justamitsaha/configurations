@@ -44,4 +44,9 @@ spring:
       hibernate:
         format_sql: 'true'
     show-sql: 'true'
+  sleuth:
+    sampler:
+      percentage: 1
+  zipkin:
+    baseUrl: http://localhost:9411/
     

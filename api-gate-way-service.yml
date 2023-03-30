@@ -64,6 +64,12 @@ spring:
         uri: lb://aws-service
         id: aws-service
         predicates[0]: Path=/awsService/**
+  sleuth:
+    sampler:
+      percentage: 1
+  zipkin:
+    baseUrl: http://localhost:9411/
+
 
 logging:
   level:
@@ -78,7 +84,7 @@ logging:
             nodeValue: TRACE
     root: INFO
 allowedUrls:
-  http://localhost:4200,http://localhost:80, http://localhost
+  http://localhost:4200,http://localhost:80,http://localhost
 jwtKey: jxgEQeXHuPq8VdbyYFNkANdudQ53YUn4 
 
 
