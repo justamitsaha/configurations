@@ -30,7 +30,7 @@ endpoints:
 
 info:
   app:
-   name: On-boarding user Service
+   name: On boarding user Service
    description: Hi Tech bank API
    version: 1.0.0      
 
